@@ -1,0 +1,150 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin-left: 80px;
+    margin-top: 15px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+main {
+    padding: 20px;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+li {
+    padding: 5px 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+a.enlace {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+a.enlace:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.screenshot {
+    margin-bottom: 30px;
+}
+
+.screenshot img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.screenshot p {
+    font-size: 14px;
+    color: #666;
+}
+
+.me {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.me img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #162735;
+    color: white;
+    font-size: small;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 80px); /* Resta el ancho de la barra de navegación */
+    left: 80px; /* Ajusta la posición para que coincida con la barra de navegación */
+}
+
+@media screen and (max-width: 760px) {
+    footer {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        left: 0; /* Alinea el footer al borde izquierdo de la pantalla */
+    }
+}
