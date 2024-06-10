@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+    --cafe: rgb(70, 46, 46);
+    --cafeTranspartente: rgba(70, 46, 46, 0.95);
+}
+
 /* Estilos base */
 * {
     margin: 0;
@@ -8,19 +14,14 @@
 }
 
 body {
-    margin-left: 80px;
     margin-top: 15px;
     transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
     background-color: #f8f9fa;
-    padding: 20px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-@media screen and (max-width: 760px) {
-    body {
-        margin-left: 0;
-        padding: 20px;
-    }
-}
 
 main {
     padding: 20px;
@@ -138,13 +139,8 @@ footer {
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: calc(100% - 80px); /* Resta el ancho de la barra de navegación */
-    left: 80px; /* Ajusta la posición para que coincida con la barra de navegación */
+    width: 100%; /* Resta el ancho de la barra de navegación */
+    left: 0; /* Ajusta la posición para que coincida con la barra de navegación */
 }
 
-@media screen and (max-width: 760px) {
-    footer {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        left: 0; /* Alinea el footer al borde izquierdo de la pantalla */
-    }
-}
+
