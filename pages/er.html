@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagrama de Entidad-Relación</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/navBar.css" />
+    <link rel="stylesheet" href="../css/diagram.css" />
+
+    <script
+      src="https://kit.fontawesome.com/41bcea2ae3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="body">
+    <div class="menu__side" id="menu_side">
+      <div class="icon__menu">
+        <i class="fa-solid fa-arrow-left" id="btn_open"></i>
+      </div>
+
+      <div class="options__menu">
+        <a href="aboutMe.html">
+          <div class="option">
+            <i class="fa-solid fa-user" title="Emilio Orduña Peña"></i>
+            <h4>Sobre mí</h4>
+          </div>
+        </a>
+
+        <a href="../index.html">
+          <div class="option">
+            <i class="fas fa-home" title="Inicio"></i>
+            <h4>Inicio</h4>
+          </div>
+        </a>
+
+        <a href="features.html">
+          <div class="option">
+            <i
+              class="fa-solid fa-bolt"
+              title="Funcionalidades y Tecnologías"
+            ></i>
+            <h4>Funcionalidades</h4>
+          </div>
+        </a>
+
+        <a href="installation.html">
+          <div class="option">
+            <i class="fas fa-download" title="Instalación"></i>
+            <h4>Instalación</h4>
+          </div>
+        </a>
+
+        <a href="usage.html">
+          <div class="option">
+            <i class="fas fa-play-circle" title="Uso"></i>
+            <h4>Uso</h4>
+          </div>
+        </a>
+
+        <a href="diagrams.html" class="selected">
+          <div class="option">
+            <i class="fas fa-sitemap" title="Diagramas"></i>
+            <h4>Diagramas</h4>
+          </div>
+        </a>
+
+        <a href="tests.html">
+          <div class="option">
+            <i class="fa-solid fa-vial-circle-check" title="Pruebas"></i>
+            <h4>Pruebas</h4>
+          </div>
+        </a>
+
+        <a href="conclusion.html">
+          <div class="option">
+            <i class="fas fa-lightbulb" title="Conclusión"></i>
+            <h4>Conclusión</h4>
+          </div>
+        </a>
+
+        <a href="references.html">
+          <div class="option">
+            <i class="fas fa-link" title="Referencias"></i>
+            <h4>Referencias</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Contenido específico de la página de Diagrama de Entidad-Relación -->
+      <h1>Diagrama de Entidad-Relación</h1>
+      <p>Aquí el diagrama de Entidad-Relación.</p>
+      <div class="container-detail">
+        <a
+          href="../img/entidad-relacion.png"
+          target="_blank"
+          class="image-container-detail"
+        >
+          <img
+            src="../img/entidad-relacion.png"
+            alt="Diagrama de Entidad-Relación"
+          />
+        </a>
+      </div>
+      <h4 class="container-detail">
+        Descripción del diagrama de entidad-relación...
+      </h4>
+      <br />
+      <ul class="container-detail">
+        <li>Entidades: Usuario, Mensaje, Chat</li>
+        <li>
+          Atributos de cada entidad (por ejemplo, nombre, correo, rol,
+          contenido, fecha, etc.)
+        </li>
+        <li>
+          Relaciones entre las entidades:
+          <p>
+            Entidades: Usuario Nombre Correo Rol Mensaje Contenido Fecha Chat
+            Relaciones: Un usuario puede enviar varios mensajes. Un mensaje
+            pertenece a un único usuario. Un chat puede tener varios mensajes.
+            Un usuario puede participar en varios chats. Un administrador puede
+            gestionar varios chats.
+          </p>
+          <ul>
+            <li>Un usuario puede enviar varios mensajes</li>
+            <li>Un mensaje pertenece a un único usuario</li>
+            <li>Un chat puede tener varios mensajes</li>
+            <li>Un usuario puede participar en varios chats</li>
+            <li>Un administrador puede gestionar varios chats</li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <span
+        >&copy; 2024 Emilio Orduña Peña | Todos los derechos reservados</span
+      >
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

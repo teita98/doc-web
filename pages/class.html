@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagrama de clases</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/navBar.css" />
+    <link rel="stylesheet" href="../css/diagram.css" />
+
+    <script
+      src="https://kit.fontawesome.com/41bcea2ae3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="body">
+    <div class="menu__side" id="menu_side">
+      <div class="icon__menu">
+        <i class="fa-solid fa-arrow-left" id="btn_open"></i>
+      </div>
+
+      <div class="options__menu">
+        <a href="aboutMe.html">
+          <div class="option">
+            <i class="fa-solid fa-user" title="Emilio Orduña Peña"></i>
+            <h4>Sobre mí</h4>
+          </div>
+        </a>
+
+        <a href="../index.html">
+          <div class="option">
+            <i class="fas fa-home" title="Inicio"></i>
+            <h4>Inicio</h4>
+          </div>
+        </a>
+
+        <a href="features.html">
+          <div class="option">
+            <i
+              class="fa-solid fa-bolt"
+              title="Funcionalidades y Tecnologías"
+            ></i>
+            <h4>Funcionalidades</h4>
+          </div>
+        </a>
+
+        <a href="installation.html">
+          <div class="option">
+            <i class="fas fa-download" title="Instalación"></i>
+            <h4>Instalación</h4>
+          </div>
+        </a>
+
+        <a href="usage.html">
+          <div class="option">
+            <i class="fas fa-play-circle" title="Uso"></i>
+            <h4>Uso</h4>
+          </div>
+        </a>
+
+        <a href="diagrams.html" class="selected">
+          <div class="option">
+            <i class="fas fa-sitemap" title="Diagramas"></i>
+            <h4>Diagramas</h4>
+          </div>
+        </a>
+
+        <a href="tests.html">
+          <div class="option">
+            <i class="fa-solid fa-vial-circle-check" title="Pruebas"></i>
+            <h4>Pruebas</h4>
+          </div>
+        </a>
+
+        <a href="conclusion.html">
+          <div class="option">
+            <i class="fas fa-lightbulb" title="Conclusión"></i>
+            <h4>Conclusión</h4>
+          </div>
+        </a>
+
+        <a href="references.html">
+          <div class="option">
+            <i class="fas fa-link" title="Referencias"></i>
+            <h4>Referencias</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Contenido específico de la página de Diagrama de clases -->
+      <h1>Diagrama de clases</h1>
+      <p>Imagen del diagrama de clases.</p>
+      <div class="container-detail">
+        <a href="../img/clases.png" target="_blank" class="image-container-detail">
+          <img src="../img/clases.png" alt="Diagrama de Clases">
+        </a>
+      </div>
+      <h4 class="container-detail">Este diagrama de clases representa el modelo de datos subyacente del sistema ProcessingChat. Permite entender la estructura y las relaciones entre las principales entidades del sistema.</h4>
+      <br />
+      <ul class="container-detail">
+        <li>Clases: Usuario, Administrador, Mensaje, Chat</li>
+        <li>
+          Clase Usuario (User)
+          <ul>
+            <li>Atributos: user_id (entero), username (cadena de texto), email (cadena de texto), password (cadena de texto), phone (cadena de texto), rol_id (entero)</li>
+            <li>Relaciones: Tiene una relación de uno a uno con la clase Rol (Role)</li>
+            <li>Operaciones: login(), logout(), updateProfile()</li>
+          </ul>
+        </li>
+        <li>
+          Clase Rol (Role)
+          <ul>
+            <li>Atributos: role_id (entero), role_name (cadena de texto)</li>
+            <li>Relaciones: Tiene una relación de uno a muchos con la clase Usuario (User)</li>
+            <li>Operaciones: createRole(), updateRole(), deleteRole()</li>
+          </ul>
+        </li>
+        <li>
+          Clase Mensaje (Message)
+          <ul>
+            <li>Atributos: message_id (entero), chat_id (entero), user_id (entero), content (cadena de texto), timestamp (fecha y hora)</li>
+            <li>Relaciones: Tiene una relación de uno a uno con la clase ChatActivo (ActiveChat) y una relación de uno a uno con la clase Usuario (User)</li>
+            <li>Operaciones: sendMessage(), deleteMessage()</li>
+          </ul>
+        </li>
+        <li>
+          Clase ChatActivo (ActiveChat)
+          <ul>
+            <li>Atributos: chat_id (entero), chat_name (cadena de texto), client_id (entero), admin_id (entero), form_id (entero), status_id (entero), delivery_date (fecha)
+            <li>Relaciones: Tiene una relación de uno a uno con la clase TipoFormulario (FormType) y una relación de uno a uno con la clase EstadoChat (ChatStatus). Además, tiene una relación de uno a muchos con la clase Mensaje (Message) y una relación de uno a uno con la clase Usuario (User) para el cliente y el administrador</li></li>
+            <li>Operaciones: createChat(), updateChat(), closeChat()</li>
+          </ul>
+        </li>
+        <li>
+          Clase TipoFormulario (FormType)
+          <ul>
+            <li>Atributos: form_id (entero), form_name (cadena de texto)</li>
+            <li>Relaciones: Tiene una relación de uno a uno con la clase ChatActivo (ActiveChat)</li>
+            <li>Operaciones: createFormType(), updateFormType(), deleteFormType()</li>
+          </ul>
+        </li>
+        <li>
+          Clase EstadoChat (ChatStatus)
+          <ul>
+            <li>Atributos: status_id (entero), status_name (cadena de texto)</li>
+            <li>Relaciones: Tiene una relación de uno a uno con la clase ChatActivo (ActiveChat)</li>
+            <li>Operaciones: createChatStatus(), updateChatStatus(), deleteChatStatus()</li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <span>&copy; 2024 Emilio Orduña Peña | Todos los derechos reservados</span>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
