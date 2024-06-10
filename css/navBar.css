@@ -1,143 +1,187 @@
-/* Estilos del icono del menú */
-.icon__menu {
-    width: 80px;
-    height: 80px;
-    background: #3b6e97;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000; /* Asegúrate de que el icono esté encima del menú */
-    visibility: visible;
-    opacity: 1;
-}
 
-.icon__menu i {
-    font-size: 20px;
-    cursor: pointer;
+.botonTransparente {
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 17px;
+    background-color: transparent;
     color: white;
-    z-index: 10001; /* Asegúrate de que el icono esté encima del botón */
+    border: 1px solid white;
+    transition: color 0.5s, background-color 0.5s;
 }
 
-/* Estilos del menú lateral */
-.menu__side {
-    width: 80px;
-    height: 100%;
-    background: #3b6e97;
+.botonTransparente:hover {
+    transition: all 0.5s;
+    color: var(--cafe);
+    background-color: white;
+}
+
+.botonNegro {
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 15px;
+    background-color: var(--cafe);
+    color: white;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.botonNegro:hover {
+    transition: all 0.5s;
+    color: var(--cafe);
+    background: white;
+}
+
+
+/*Navegacion*/
+
+nav::-webkit-scrollbar { /*background*/
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+nav::-webkit-scrollbar-thumb {
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav {
+    border-radius: 20px;
+    padding: 10px 0px 30px 0px;
+    margin: 10px 0px 10px 0px;
+
     position: fixed;
-    top: 0;
-    left: 0;
+    z-index: 1;
+    left: 10px; 
+
+    width: 20em;
+    max-height: 650px;
+    overflow-y:auto;
+
+    backdrop-filter: blur(40px);
+    color: white;
+    background-color: #80B198;
+    transition: width 0.5s, max-height 0.5s 0.5s;
+}
+
+.ocultarSeccionNav {
+    width: 50px;
+    max-height: 10px;
+    overflow: hidden;
+    border-radius: 40px;
+    transition: width 0.5s, max-height 0.5s 0.5s, border-radius 0.5s;
+}
+
+.ocultarSeccionNav:hover {
+    width: 70px;
+}
+
+.ocultarSeccionNav .seccionNav,
+.ocultarSeccionNav h2 {
+    transform: translateX(220px);
+    transition: all 0s;
+}
+
+.icon {
     color: white;
     font-size: 18px;
-    z-index: 500; /* Asegúrate de que el menú esté debajo del icono del menú */
-    overflow: hidden;
-    overflow-y: auto;
-    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    padding: 0;
-    margin: 0;
-    border-right: 20px solid #3b6e97; /* Posible causa de la línea visible */
+    margin-right: 8px;
 }
 
-/* Ocultar scroll para varios navegadores */
-.menu__side::-webkit-scrollbar {
-    display: none;
+  /* Iconos de navegación */
+.icono-nav {
+    font-size: 25px;
+    color: #f5f6f7;
+    transition: color 0.3s;
 }
+  
+.header .icono-nav {
+    position: absolute;
+    top: 9px;
+    left: 14px;
+    width: 25px;
+    height: auto;
+    background-color: #80B198;
+  }
 
-.menu__side {
-    -ms-overflow-style: none; /* IE y Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-/* Opciones del menú */
-.options__menu {
-    padding: 20px 30px;
-    margin-top: 80px; /* Dejar espacio para el icono del menú */
-}
-
-.options__menu a {
-    color: #ffffffb2;
-    cursor: default;
-    display: block;
-    position: relative;
-    transition: color 300ms;
-}
-
-.options__menu a:hover {
+nav h2 {
+    padding: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0px 0px 0px;
     color: white;
 }
 
-.options__menu .option {
-    padding: 20px 0;
+nav p {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+nav>div {
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.options__menu .option i {
-    width: 20px;
-    margin-right: 20px;
-    cursor: pointer;
+nav .header { 
+    margin: 20px 0px;
 }
 
-.options__menu .option h4 {
-    font-weight: 300;
-    cursor: pointer;
+nav .visible {
+    display: flex;
+    align-items: center;
+    height: 63px;
 }
 
-a.selected {
-    color: #fff;
+nav .visible p{
+    margin-left: 20px;
+    width: 175px;
 }
 
-.selected:before {
-    content: '';
-    width: 3px;
-    height: 80%;
-    background: white;
-    position: absolute;
-    top: 10%;
-    left: -30px;
+nav .seccionNav {
+    overflow: hidden;
+    gap: 0px;
+
+    width: fit-content;
+    margin-left: 30px;
 }
 
-/* Clases para usar en JavaScript */
-.body_move {
-    margin-left: 250px;
-    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
 
-.menu__side_move {
-    width: 250px;
-    left: 0;
-}
+footer {
+    color: white;
+    margin-top: 30px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1A1A1A;
 
-/* Ajustes para pantallas pequeñas */
-@media screen and (max-width: 760px) {
-    .menu__side {
-        width: 0;
-        border-right: none; /* Eliminar el borde derecho en móviles */
+}
+/* Responsive */
+
+/* phone */
+@media (min-width: 0px) and (max-width: 760px) {
+    .informacionGeneral>div:first-child {
+        border-right: 0px solid black;
     }
 
-    .menu__side_move {
-        width: 100%;
-        left: 0;
+    .botonTransparente {
+        background-color: white;
+        color: var(--cafe);
     }
 
-    .body_move {
-        margin-left: 0;
-    }
-}
-
-/* Estilos específicos para Safari */
-@supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    .icon__menu {
-        position: fixed !important;
-        display: flex !important; /* Asegura que el botón sea visible */
-        z-index: 10000 !important; /* Eleva el z-index para que esté por encima de todos los elementos */
-        background-color: #3b6e97 !important; /* Asegúrate de que tenga un fondo visible */
+    .botonNegro {
+        color: var(--cafe);
+        background-color: white;
     }
 
-    .icon__menu i {
-        color: white !important; /* Asegúrate de que el ícono sea visible */
+    .informacionGeneral>div:first-child {
+        border-bottom: 1px solid black;
     }
+
+    .ocultarSeccionNav:hover {
+        width: 50px;
+    }
+    
+
 }

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentacion Proyecto</title>
-
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/navBar.css" />
 
@@ -15,79 +14,58 @@
     ></script>
   </head>
   <body id="body">
-    <div class="menu__side" id="menu_side">
-      <div class="icon__menu">
-        <i class="fa-solid fa-arrow-left" id="btn_open"></i>
+    <nav class="ocultarSeccionNav" id="nav">
+      <!-- Tipo 1 -->
+      <div class="header">
+        <h2>Índice</h2>
+        <i id="mostrarOcultarNav" class="fas fa-bars icono-nav"></i>
       </div>
 
-      <div class="options__menu">
-        <a href="pages/aboutMe.html">
-          <div class="option">
-            <i class="fa-solid fa-user" title="Emilio Orduña Peña"></i>
-            <h4>Sobre mí</h4>
-          </div>
-        </a>
+      <!-- Tipo 2 -->
+      <div class="seccionNav">
+        <div class="visible">
+          <i class="fa-solid fa-user" title="Emilio Orduña Peña"></i>
+          <a href="pages/aboutMe.html"><p>Sobre mí</p></a>
+        </div>
 
-        <a href="index.html" class="selected">
-          <div class="option">
-            <i class="fas fa-home" title="Inicio"></i>
-            <h4>Inicio</h4>
-          </div>
-        </a>
+        <div class="visible">
+          <i class="fas fa-home" title="Inicio"></i>
+          <a href="index.html"><p>Inicio</p></a>
+        </div>
+        <div class="visible">
+          <i class="fa-solid fa-bolt" title="Funcionalidades y Tecnologías"></i>
+          <a href="pages/features.html"><p>Funcionalidades</p></a>
+        </div>
+        <div class="visible">
+          <i class="fas fa-download" title="Instalación"></i>
+          <a href="pages/installation.html"><p>Instalación</p></a>
+        </div>
 
-        <a href="pages/features.html">
-          <div class="option">
-            <i
-              class="fa-solid fa-bolt"
-              title="Funcionalidades y Tecnologías"
-            ></i>
-            <h4>Funcionalidades</h4>
-          </div>
-        </a>
+        <div class="visible">
+          <i class="fas fa-play-circle" title="Uso"></i>
+          <a href="pages/usage.html"><p>Uso</p></a>
+        </div>
 
-        <a href="pages/installation.html">
-          <div class="option">
-            <i class="fas fa-download" title="Instalación"></i>
-            <h4>Instalación</h4>
-          </div>
-        </a>
+        <div class="visible">
+          <i class="fas fa-sitemap" title="Diagramas"></i>
+          <a href="pages/diagrams.html"><p>Diagramas</p></a>
+        </div>
 
-        <a href="pages/usage.html">
-          <div class="option">
-            <i class="fas fa-play-circle" title="Uso"></i>
-            <h4>Uso</h4>
-          </div>
-        </a>
+        <div class="visible">
+          <i class="fa-solid fa-vial-circle-check" title="Pruebas"></i>
+          <a href="pages/tests.html"><p>Pruebas</p></a>
+        </div>
 
-        <a href="pages/diagrams.html">
-          <div class="option">
-            <i class="fas fa-sitemap" title="Diagramas"></i>
-            <h4>Diagramas</h4>
-          </div>
-        </a>
-
-        <a href="pages/tests.html">
-          <div class="option">
-            <i class="fa-solid fa-vial-circle-check" title="Pruebas"></i>
-            <h4>Pruebas</h4>
-          </div>
-        </a>
-
-        <a href="pages/conclusion.html">
-          <div class="option">
-            <i class="fas fa-lightbulb" title="Conclusión"></i>
-            <h4>Conclusión</h4>
-          </div>
-        </a>
-
-        <a href="pages/references.html">
-          <div class="option">
-            <i class="fas fa-link" title="Referencias"></i>
-            <h4>Referencias</h4>
-          </div>
-        </a>
+        <div class="visible">
+          <i class="fas fa-lightbulb" title="Conclusión"></i>
+          <a href="pages/conclusion.html"><p>Conclusión</p></a>
+        </div>
+        <div class="visible">
+          <i class="fas fa-link" title="Referencias"></i>
+          <a href="pages/references.html"><p>Referencias</p></a>
+        </div>
       </div>
-    </div>
+    </nav>
 
     <main>
       <h1>Processing Chat App</h1>
@@ -219,6 +197,7 @@
         >&copy; 2024 Emilio Orduña Peña | Todos los derechos reservados</span
       >
     </footer>
+    <!--<script src="js/script.js"></script>-->
     <script src="js/script.js"></script>
   </body>
 </html>
