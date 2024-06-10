@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagrama de Casos de Uso</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/navBar.css" />
+    <link rel="stylesheet" href="../css/diagram.css" />
+
+    <script
+      src="https://kit.fontawesome.com/41bcea2ae3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="body" class="small-window">
+    <div class="menu__side" id="menu_side">
+      <div class="icon__menu">
+        <i class="fa-solid fa-arrow-left" id="btn_open"></i>
+      </div>
+
+      <div class="options__menu">
+        <a href="aboutMe.html">
+          <div class="option">
+            <i class="fa-solid fa-user" title="Emilio Orduña Peña"></i>
+            <h4>Sobre mí</h4>
+          </div>
+        </a>
+
+        <a href="../index.html">
+          <div class="option">
+            <i class="fas fa-home" title="Inicio"></i>
+            <h4>Inicio</h4>
+          </div>
+        </a>
+
+        <a href="features.html">
+          <div class="option">
+            <i
+              class="fa-solid fa-bolt"
+              title="Funcionalidades y Tecnologías"
+            ></i>
+            <h4>Funcionalidades</h4>
+          </div>
+        </a>
+
+        <a href="installation.html">
+          <div class="option">
+            <i class="fas fa-download" title="Instalación"></i>
+            <h4>Instalación</h4>
+          </div>
+        </a>
+
+        <a href="usage.html">
+          <div class="option">
+            <i class="fas fa-play-circle" title="Uso"></i>
+            <h4>Uso</h4>
+          </div>
+        </a>
+
+        <a href="diagrams.html" class="selected">
+          <div class="option">
+            <i class="fas fa-sitemap" title="Diagramas"></i>
+            <h4>Diagramas</h4>
+          </div>
+        </a>
+
+        <a href="tests.html">
+          <div class="option">
+            <i class="fa-solid fa-vial-circle-check" title="Pruebas"></i>
+            <h4>Pruebas</h4>
+          </div>
+        </a>
+
+        <a href="conclusion.html">
+          <div class="option">
+            <i class="fas fa-lightbulb" title="Conclusión"></i>
+            <h4>Conclusión</h4>
+          </div>
+        </a>
+
+        <a href="references.html">
+          <div class="option">
+            <i class="fas fa-link" title="Referencias"></i>
+            <h4>Referencias</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Contenido específico de la página de Diagrama de Casos de Uso -->
+      <h1>Diagrama de Casos de Uso</h1>
+      <p>Imagen del Diagrama de Casos de Uso.</p>
+      <div class="container-detail">
+        <a
+          href="../img/caso_uso.png"
+          target="_blank"
+          class="image-container-detail"
+        >
+          <img src="../img/caso_uso.png" alt="Diagrama de Casos de Uso" />
+        </a>
+      </div>
+      <h4 class="container-detail">
+        El diagrama muestra la interacción entre los diferentes actores (Usuario
+        y Administrador) y los casos de uso del sistema ProcessingChat.
+      </h4>
+      <br />
+      <ul class="container-detail">
+        <li>Actores: Usuario, Administrador</li>
+        <li>
+          Funcionalidades del Usuario
+          <ul>
+            <li>
+              Seleccionar chats: El usuario puede buscar y seleccionar un chat.
+            </li>
+            <li>
+              Enviar mensaje: El usuario puede enviar mensajes a través de la
+              aplicación.
+            </li>
+            <li>
+              Ver mensajes: El usuario puede visualizar los mensajes de los
+              chats.
+            </li>
+            <li>
+              Rellenar formulario: El usuario puede completar y enviar un
+              formulario dentro del sistema.
+            </li>
+            <li>
+              Iniciar sesión: El usuario puede autenticarse e ingresar al
+              sistema.
+            </li>
+            <li>
+              Cerrar sesión: El usuario puede cerrar su sesión en el sistema.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Funcionalidades del Administrador
+          <ul>
+            <li>
+              Gestionar usuarios: El administrador puede añadir usuarios al
+              sistema.
+            </li>
+            <li>
+              Gestionar chats: El administrador puede crear, ver y enviar
+              mensajes.
+            </li>
+            <li>
+              Ver mensajes: El administrador puede visualizar los mensajes de
+              los chats.
+            </li>
+            <li>
+              Iniciar sesión: El administrador puede autenticarse e ingresar al
+              sistema.
+            </li>
+            <li>
+              Cerrar sesión: El administrador puede cerrar su sesión en el
+              sistema.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <span
+        >&copy; 2024 Emilio Orduña Peña | Todos los derechos reservados</span
+      >
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

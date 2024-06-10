@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentacion Proyecto</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
+
+    <script
+      src="https://kit.fontawesome.com/41bcea2ae3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="body">
+    <div class="menu__side" id="menu_side">
+      <div class="icon__menu">
+        <i class="fa-solid fa-arrow-left" id="btn_open"></i>
+      </div>
+
+      <div class="options__menu">
+        <a href="pages/aboutMe.html">
+          <div class="option">
+            <i class="fa-solid fa-user" title="Emilio Orduña Peña"></i>
+            <h4>Sobre mí</h4>
+          </div>
+        </a>
+
+        <a href="index.html" class="selected">
+          <div class="option">
+            <i class="fas fa-home" title="Inicio"></i>
+            <h4>Inicio</h4>
+          </div>
+        </a>
+
+        <a href="pages/features.html">
+          <div class="option">
+            <i
+              class="fa-solid fa-bolt"
+              title="Funcionalidades y Tecnologías"
+            ></i>
+            <h4>Funcionalidades</h4>
+          </div>
+        </a>
+
+        <a href="pages/installation.html">
+          <div class="option">
+            <i class="fas fa-download" title="Instalación"></i>
+            <h4>Instalación</h4>
+          </div>
+        </a>
+
+        <a href="pages/usage.html">
+          <div class="option">
+            <i class="fas fa-play-circle" title="Uso"></i>
+            <h4>Uso</h4>
+          </div>
+        </a>
+
+        <a href="pages/diagrams.html">
+          <div class="option">
+            <i class="fas fa-sitemap" title="Diagramas"></i>
+            <h4>Diagramas</h4>
+          </div>
+        </a>
+
+        <a href="pages/tests.html">
+          <div class="option">
+            <i class="fa-solid fa-vial-circle-check" title="Pruebas"></i>
+            <h4>Pruebas</h4>
+          </div>
+        </a>
+
+        <a href="pages/conclusion.html">
+          <div class="option">
+            <i class="fas fa-lightbulb" title="Conclusión"></i>
+            <h4>Conclusión</h4>
+          </div>
+        </a>
+
+        <a href="pages/references.html">
+          <div class="option">
+            <i class="fas fa-link" title="Referencias"></i>
+            <h4>Referencias</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <h1>Processing Chat App</h1>
+      <h3>Introducción</h3>
+      <p>
+        "Processing Chat App" es una aplicación de chat desarrollada para
+        optimizar la comunicación entre clientes y administradores. Esta
+        herramienta permite el intercambio de mensajes de manera eficiente y
+        segura, proporcionando una experiencia de chat fluida y efectiva. Está
+        diseñada tanto para completar el proceso postcompra de la
+        personalización de productos específicos, como para servir de soporte en
+        caso de cualquier incidente relacionado con los mismos.
+      </p>
+
+      <h3>Motivación</h3>
+      <p>
+        El impulso para empezar este proyecto surge de la necesidad urgente de
+        digitalizar y mejorar los procesos empresariales en los comercios
+        locales. He observado cómo la falta de digitalización puede limitar el
+        crecimiento y la eficiencia de estos negocios, dificultando su capacidad
+        para competir en un mercado cada vez más digital y exigente.
+        <br /><br />
+        La idea de desarrollar esta aplicación web nació tras revisar estudios
+        universitarios sobre el sector empresarial local, que destacaban la
+        necesidad de adoptar soluciones tecnológicas innovadoras. Estos estudios
+        subrayan la importancia de optimizar la operatividad y mejorar la
+        experiencia tanto de los propietarios como de los clientes. Mi
+        motivación principal es identificar y abordar estos desafíos específicos
+        para mejorar el desempeño y la satisfacción en este ámbito.
+        <br /><br />
+        La digitalización de empresas y comercios locales representa una gran
+        oportunidad para optimizar procesos, mejorar la atención al cliente y
+        aumentar la competitividad en un mercado en constante evolución.
+        Ofreciendo soluciones tecnológicas adaptadas a sus necesidades, buscamos
+        facilitar su adaptación al entorno digital y proporcionarles
+        herramientas para competir de manera más efectiva.
+        <br /><br />
+        La creación de esta aplicación está impulsada por la convicción de que
+        la tecnología puede ser un catalizador para el crecimiento y la
+        innovación en el sector empresarial local. Al mejorar la comunicación y
+        la interacción entre clientes y propietarios, aspiramos a transformar
+        las operaciones comerciales y la gestión de relaciones, promoviendo un
+        entorno más eficiente, conectado y centrado en el cliente.
+        <br /><br />
+        En resumen, mi motivación para este proyecto se basa en contribuir al
+        avance y la mejora de los negocios locales mediante soluciones
+        tecnológicas innovadoras. Al aprovechar el potencial de la
+        digitalización, buscamos resolver problemas prácticos, mejorar la
+        eficiencia operativa e impulsar el crecimiento y la competitividad de
+        estos negocios en un mundo cada vez más digital y competitivo.
+      </p>
+
+      <h3>Descripción del Proyecto</h3>
+      <p>El proyecto se despliega en dos componentes principales:</p>
+      <div>
+        <ul>
+          <li>
+            <strong>Backend:</strong>
+            <ul>
+              <li>
+                <strong>API con FastAPI:</strong> Opté por FastAPI para el
+                desarrollo del backend debido a su rapidez, facilidad de uso y
+                alto rendimiento. FastAPI es un marco web moderno y eficiente
+                para la creación de APIs en Python. Su capacidad para gestionar
+                operaciones CRUD de forma rápida y segura lo convierte en la
+                opción ideal para manejar las operaciones de usuarios, mensajes
+                y chats en nuestro sistema.
+              </li>
+              <li>
+                <strong
+                  >Microservicio de Mensajería Instantánea con Express y
+                  Socket.io:</strong
+                >
+                Para la implementación del servicio de mensajería instantánea,
+                elegí Express.js y Socket.io. Express.js proporciona un entorno
+                robusto para construir aplicaciones web y APIs en Node.js,
+                mientras que Socket.io facilita la comunicación en tiempo real
+                entre clientes y servidores a través de WebSockets. Esta
+                combinación nos permite ofrecer una experiencia de chat fluida y
+                en tiempo real para nuestros usuarios.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Frontend:</strong>
+            <ul>
+              <li>
+                <strong>Desarrollo con Angular:</strong> Angular fue la elección
+                para el desarrollo del frontend debido a su estructura modular,
+                su enfoque en la creación de aplicaciones de una sola página
+                (SPA) y su sólido sistema de componentes. Estas características
+                garantizan una interfaz de usuario dinámica y altamente
+                interactiva. La estructura de Angular permite a los clientes
+                acceder y realizar diversas acciones de manera intuitiva,
+                mientras que los administradores tienen acceso a funciones
+                adicionales para gestionar eficientemente las operaciones del
+                sistema.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <h3>Objetivos</h3>
+      <ul>
+        <li>Digitalización de Empresas Locales</li>
+        <li>Mejora de la Eficiencia Operativa</li>
+        <li>Facilitar la Comunicación</li>
+        <li>Ofrecer una Experiencia de Usuario Mejorada</li>
+        <li>Promover la Competitividad Empresarial</li>
+      </ul>
+      <h3>Beneficios y Valor Agregado</h3>
+      <p>
+        Al implementar esta solución tecnológica, se esperan una serie de
+        beneficios tangibles e intangibles tanto para los negocios locales como
+        para la comunidad en general:
+      </p>
+      <ul>
+        <li>Optimización de Procesos</li>
+        <li>Mayor Satisfacción del Cliente</li>
+        <li>Mejora de la Competitividad</li>
+        <li>Impulso al Desarrollo Económico Local</li>
+        <li>Conectividad y Colaboración</li>
+      </ul>
+    </main>
+    <footer>
+      <span
+        >&copy; 2024 Emilio Orduña Peña | Todos los derechos reservados</span
+      >
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
